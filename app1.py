@@ -16,9 +16,9 @@ app = Flask(__name__)
 def home():
     return render_template("form PredictionModel.html")
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["GET"])
 def predict():
-    if request.method == "POST":
+    if request.method == "GET":
         val1 = float(request.form['pregnancies'])
         val2 = float(request.form['glucose'])
         val3 = float(request.form['bloodPressure'])
