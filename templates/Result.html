@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .result-image {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .positive-result {
+            color: #4CAF50;
+        }
+
+        .negative-result {
+            color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Diabetes Prediction Result</h2>
+
+    <!-- Display the prediction result with images -->
+    {% if result == "1" %}
+        <img src="https://imgflip.com/s/meme/Spiderman-Hospital.jpg" alt="Positive Result" class="result-image">
+        <p class="positive-result">The prediction result is Positive.</p>
+    {% else %}
+        <img src="https://www.meme-arsenal.com/memes/9a40295828dcbe2b61ae2aa14f6b2b42.jpg" alt="Negative Result" class="result-image">
+        <p class="negative-result">The prediction result is Negative.</p>
+    {% endif %}
+
+</body>
+</html>
