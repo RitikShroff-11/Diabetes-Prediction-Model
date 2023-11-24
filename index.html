@@ -14,12 +14,12 @@
         }
 
         header {
-            background-image: url('/static/background image.png');
+            background-image: url('https://images.pexels.com/photos/6941884/pexels-photo-6941884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             background-size: centre centrepip;
             background-position: centre centre;
             padding: 50px;
             color: white;
-            height: 150px;
+            height: 300px;
             width: 100%;
         }
 
@@ -74,7 +74,7 @@
     <!-- <img src="https://storage.googleapis.com/kaggle-datasets-images/3102947/5344155/d4f2d9d63736fff7b6ba10f73774752e/dataset-card.png?t=2023-04-08-06-42-24" alt="Header Image" width="200"> -->
 </header>
 
-<form action="{{ url_for('predict') }}" method="GET">
+<form action="{{ url_for('predict') }}" method="post">
      <label for="pregnancies">Pregnancies:</label>
         <input type="number" id="pregnancies" name="pregnancies" required step="any">
 
