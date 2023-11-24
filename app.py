@@ -16,7 +16,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["GET","POST"])
 def predict():
     if request.method == "POST":
         val1 = float(request.form['pregnancies'])
@@ -34,6 +34,6 @@ def predict():
         return render_template("Result.html", result=pred )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
 
 
